@@ -31,6 +31,24 @@ uv sync
 uv run -- pdf-lib --help
 ```
 
+---
+
+### One-command smoke test (50 PDFs, end-to-end)
+
+This is the easiest way to verify everything works after cloning:
+
+```bash
+bash ./scripts/smoke_test.sh ~/PDF_Library_SmokeTest
+```
+
+Use a **new/empty** directory for the test (the script refuses to run if the target dir isn’t empty).
+
+It will:
+- bootstrap and start **UZU locally** if needed (clone/build/download default model)
+- create **50 synthetic PDFs** (privacy-safe)
+- run scan → copy → categorize via **local UZU**
+- print **`ALL GOOD`** if successful
+
 If you prefer using uv directly (instead of the wrapper):
 
 ```bash
