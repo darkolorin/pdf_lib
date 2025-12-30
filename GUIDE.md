@@ -109,6 +109,8 @@ chmod +x ./scripts/uzu_serve.sh
 ./scripts/uzu_serve.sh
 ```
 
+By default, `./scripts/uzu_serve.sh` downloads and serves **Qwen3-4B-Instruct** (you can override via env vars documented at the top of that script).
+
 Modes:
 - `--llm-mode fallback` (default): only call LLM when rule-based is “not confident”
   (e.g. defaulted to `Unsorted` / below `min_score`).

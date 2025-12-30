@@ -126,7 +126,7 @@ chmod +x ./scripts/uzu_serve.sh
 This will:
 - clone `uzu` from [trymirai/uzu](https://github.com/trymirai/uzu.git)
 - build `uzu_cli` (Rust)
-- download a default model (configurable) if needed
+- download a default model (**Qwen3-4B-Instruct**) if needed (configurable)
 - start the server on `http://localhost:8000`
 
 2) Start the server (example; adjust paths for your machine):
