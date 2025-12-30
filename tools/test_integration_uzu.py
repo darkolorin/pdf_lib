@@ -86,7 +86,7 @@ def main() -> None:
         recategorize_all=True,
         text_sample_bytes=0,  # don't call mdls in the sandbox
         llm_provider="uzu",
-        llm_model="qwen3-3b",
+        llm_model="qwen3-4b",
         llm_mode="always",
         llm_min_confidence=0.6,
         llm_timeout_seconds=2.0,

@@ -85,7 +85,7 @@ def categorize_library(
 
     if llm_provider == "uzu":
         # The model is selected when you start the uzu server; this is mostly informative.
-        llm_model = llm_model or os.environ.get("UZU_MODEL") or "qwen3-3b"
+        llm_model = llm_model or os.environ.get("UZU_MODEL") or "qwen3-4b"
 
     use_text_llm = llm_provider != "off"
     use_text = (use_text_rules or use_text_llm) and text_sample_bytes > 0 and shutil.which("mdls") is not None

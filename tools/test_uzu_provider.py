@@ -29,7 +29,7 @@ def main() -> None:
 
     res = llm.llm_classify_category(
         provider="uzu",
-        model="qwen3-3b",
+        model="qwen3-4b",
         categories=["Receipts & Invoices", "Manuals & Guides", "Unsorted"],
         default_category="Unsorted",
         source_path="~/Downloads/invoice.pdf",
