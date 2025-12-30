@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-lib"
+version = "0.1.0"
+description = "Local PDF collector + deduped vault + categorizer (macOS-focused)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "You"}]
+dependencies = []
+
+[project.scripts]
+pdf-lib = "pdf_lib.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+pdf_lib = ["default_categories.json"]
+
+

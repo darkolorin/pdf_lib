@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Lightweight wrapper so you can run from this repo without installing anything.
+# If `uv` is installed, we prefer it (isolated venv, avoids PEP-668 pip issues).
+REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export PYTHONPATH="${REPO_DIR}/src${PYTHONPATH:+:$PYTHONPATH}"
+
+if command -v uv >/dev/null 2>&1; then
+  # Keep uv cache inside the repo (portable; avoids restricted home dir environments).
+  export UV_CACHE_DIR="${REPO_DIR}/.uv-cache"
+  # Prefer uv (isolated venv, avoids PEP-668 pip issues), but always fall back to
+  # the system Python if uv fails for any reason.
+  UV_ERR_FILE="${REPO_DIR}/.uv_run_error.txt"
+  if uv run -- python -m pdf_lib "$@" 2> "${UV_ERR_FILE}"; then
+    rm -f "${UV_ERR_FILE}"
+    exit 0
+  fi
+  UV_STATUS=$?
+
+  # Uncomment for debugging:
+  # cat "${UV_ERR_FILE}" >&2
+  rm -f "${UV_ERR_FILE}"
+  # Fall back to direct execution. (If dependencies are added later and this fails,
+  # use `uv run -- ...` directly.)
+  exec python3 -m pdf_lib "$@"
+fi
+
+exec python3 -m pdf_lib "$@"
+
+

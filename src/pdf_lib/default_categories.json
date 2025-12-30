@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "default_category": "Unsorted",
+  "min_score": 4,
+  "categories": [
+    {
+      "name": "Receipts & Invoices",
+      "priority": 100,
+      "path_keywords_any": ["receipt", "receipts", "invoice", "invoices", "expense", "expenses", "tax", "taxes"],
+      "filename_keywords_any": ["receipt", "invoice", "bill", "order", "tax"],
+      "text_keywords_any": ["invoice", "receipt", "amount due", "subtotal", "total due", "tax", "paid", "payment method", "order number"]
+    },
+    {
+      "name": "Statements & Finance",
+      "priority": 90,
+      "path_keywords_any": ["statement", "statements", "finance", "bank", "banking", "credit", "card", "cards"],
+      "filename_keywords_any": ["statement", "bank", "credit", "visa", "mastercard", "amex"],
+      "text_keywords_any": ["account number", "statement period", "opening balance", "closing balance", "transactions", "interest rate"]
+    },
+    {
+      "name": "Legal & Contracts",
+      "priority": 80,
+      "path_keywords_any": ["legal", "contract", "contracts", "agreement", "agreements"],
+      "filename_keywords_any": ["contract", "agreement", "nda", "terms"],
+      "text_keywords_any": ["agreement", "this contract", "party", "parties", "hereby", "governing law", "signature", "witness"]
+    },
+    {
+      "name": "Medical",
+      "priority": 70,
+      "path_keywords_any": ["medical", "health", "clinic", "hospital", "lab", "labs"],
+      "filename_keywords_any": ["medical", "lab", "prescription"],
+      "text_keywords_any": ["patient", "diagnosis", "prescription", "provider", "laboratory", "results", "clinical"]
+    },
+    {
+      "name": "Travel",
+      "priority": 60,
+      "path_keywords_any": ["travel", "trips", "itinerary", "itineraries", "boarding", "flights"],
+      "filename_keywords_any": ["itinerary", "boarding", "ticket", "reservation", "hotel", "flight"],
+      "text_keywords_any": ["boarding pass", "itinerary", "reservation", "check-in", "departure", "arrival", "confirmation"]
+    },
+    {
+      "name": "Manuals & Guides",
+      "priority": 55,
+      "path_keywords_any": ["manual", "manuals", "guides", "documentation", "docs"],
+      "filename_keywords_any": ["manual", "guide", "datasheet", "spec", "specification"],
+      "text_keywords_any": ["user guide", "installation", "instructions", "troubleshooting", "warranty", "specifications", "safety instructions"]
+    },
+    {
+      "name": "Research Papers",
+      "priority": 50,
+      "max_pages": 80,
+      "path_keywords_any": ["paper", "papers", "research", "arxiv", "journal", "conference"],
+      "filename_keywords_any": ["arxiv", "paper", "preprint", "doi"],
+      "text_keywords_any": ["abstract", "introduction", "related work", "method", "results", "conclusion", "references", "doi", "arxiv"]
+    },
+    {
+      "name": "Books",
+      "priority": 40,
+      "min_pages": 80,
+      "path_keywords_any": ["books", "ebooks", "ebook", "calibre", "kindle"],
+      "filename_keywords_any": ["book", "ebook"],
+      "text_keywords_any": ["isbn", "table of contents", "publisher", "copyright", "edition"]
+    },
+    {
+      "name": "Presentations",
+      "priority": 30,
+      "max_pages": 120,
+      "path_keywords_any": ["slides", "presentations", "deck"],
+      "filename_keywords_any": ["slides", "deck", "presentation"],
+      "text_keywords_any": ["agenda", "slide", "q&a"]
+    },
+    {
+      "name": "Education",
+      "priority": 20,
+      "path_keywords_any": ["school", "university", "course", "courses", "education", "class"],
+      "filename_keywords_any": ["syllabus", "assignment", "lecture", "homework", "exam"],
+      "text_keywords_any": ["syllabus", "assignment", "lecture", "homework", "grading", "exam"]
+    }
+  ]
+}
+
+

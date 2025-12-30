@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.DS_Store
+.venv/
+.uv-cache/
+
+# Local library outputs
+PDF_Library/
+pdf_library/
+library/
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+.pdf_lib_tmp/
+
+
