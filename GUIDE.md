@@ -102,6 +102,13 @@ export UZU_BASE_URL="http://localhost:8000"
 ./pdf-lib categorize --library ~/PDF_Library --llm-provider uzu
 ```
 
+Bootstrap option (recommended):
+
+```bash
+chmod +x ./scripts/uzu_serve.sh
+./scripts/uzu_serve.sh
+```
+
 Modes:
 - `--llm-mode fallback` (default): only call LLM when rule-based is “not confident”
   (e.g. defaulted to `Unsorted` / below `min_score`).

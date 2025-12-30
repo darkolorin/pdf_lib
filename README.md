@@ -116,7 +116,18 @@ By default, categorization is **local + rule-based** (no network). You can optio
 
 UZU runs a **local OpenAI-compatible server** on your Mac (Apple Silicon).
 
-1) Set up UZU and a local model (SafeTensors format).
+1) Start UZU locally (this repo can bootstrap it for you):
+
+```bash
+chmod +x ./scripts/uzu_serve.sh
+./scripts/uzu_serve.sh
+```
+
+This will:
+- clone `uzu` from [trymirai/uzu](https://github.com/trymirai/uzu.git)
+- build `uzu_cli` (Rust)
+- download a default model (configurable) if needed
+- start the server on `http://localhost:8000`
 
 2) Start the server (example; adjust paths for your machine):
 
